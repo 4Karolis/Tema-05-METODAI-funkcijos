@@ -81,18 +81,46 @@ namespace Tema_5_Methodai
 
             //--------------------------------------------------- 6 UZDUOTIS --------------------------------------------------------
 
-            PrintOutArrayList();
-            int arejuSK = ArejuSkaicius();
-            int suma = ArejuSuma();
-            Console.WriteLine($"Suma: {suma}, viso: {arejuSK} elementai");
+            //PrintOutArrayList();
+            //int arejuSK = ArejuSkaicius();
+            //int suma = ArejuSuma();
+            //Console.WriteLine($"Suma: {suma}, viso: {arejuSK} elementai");
+            ////ArejuSumaElementai();
+
+            //--------------------------------------------------- 7 UZDUOTIS --------------------------------------------------------
+
+            //PakeltiLaipsniu();
+           
+            //--------------------------------------------------- 8 UZDUOTIS --------------------------------------------------------
+
+
 
         }//---------------------------------------------------------------------------------------------------------------------------
-        //public static void ArejuSumaElementai(int arejuSK, int suma)
-        //{
-        //    arejuSK = ArejuSkaicius();
-        //    suma = ArejuSuma();
-        //    Console.WriteLine($"Suma: {suma}, viso: {arejuSK} elementai");
-        //}
+        public static void PakeltiLaipsniu()
+        {
+            double sk1 = Gauti1Sk();
+            double sk2 = Gauti2Sk();
+            double laipsnis = Math.Pow(sk1, sk2);
+            Console.WriteLine($"Skaiciu {sk1} pakelus laipsniu {sk2} gauname: {laipsnis}");
+        }
+        public static double Gauti1Sk()
+        {
+            Console.WriteLine("Iveskite pirma skaiciu: ");
+            double skaicius1 = double.Parse(Console.ReadLine());
+            return skaicius1;
+        }
+        public static double Gauti2Sk()
+        {
+            Console.WriteLine("Ivbeskite antras skaiciu: ");
+            double skaicius2 = double.Parse(Console.ReadLine());
+            return skaicius2;
+        }
+        public static void ArejuSumaElementai(int arejuSK, int suma)
+        {
+            arejuSK = ArejuSkaicius();
+            suma = ArejuSuma();
+            Console.WriteLine($"Suma: {suma}, viso: {arejuSK} elementai");
+        }
         public static void PrintOutArrayList()
         {
             int[] arejus = new int[] { 1, 24, 46, 71, 18 };
