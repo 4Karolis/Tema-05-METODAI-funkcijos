@@ -7,6 +7,7 @@ namespace Tema_5_Methodai
     {
         static void Main(string[] args)
         {
+            #region
             Console.WriteLine("Hello World!");
 
             int num1 = 5;
@@ -94,6 +95,8 @@ namespace Tema_5_Methodai
             List<string> stringList = new List<string>();
             stringList.Add(stringToAdd);
             return stringList;
+
+            #endregion
         }
     }
 }
