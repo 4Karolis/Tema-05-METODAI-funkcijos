@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Tema_5_Methodai
 {
@@ -7,41 +8,227 @@ namespace Tema_5_Methodai
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
 
-            int num1 = 5;
-            int num2 = 10;
+            //int num1 = 5;
+            //int num2 = 10;
 
-            //Return Methodai
-            int sum = AddTwoNumbers(5, 10);
-            int sum2 = AddTwoNumbers(num1, num2);
+            ////Return Methodai
+            //int sum = AddTwoNumbers(5, 10);
+            //int sum2 = AddTwoNumbers(num1, num2);
 
-            //Void Methodai
-            List<string> stringList = new List<string>();
-            AddToList(stringList, "Vilnius");
-            AddToList(stringList, "Kaunas");
-            AddToList(stringList, "Klaipeda");
+            ////Void Methodai
+            //List<string> stringList = new List<string>();
+            //AddToList(stringList, "Vilnius");
+            //AddToList(stringList, "Kaunas");
+            //AddToList(stringList, "Klaipeda");
 
-            List<string> stringList1 = AddToList("Vilnius");
-            List<string> stringList2 = AddToList("Kaunas");
-            List<string> stringList3 = AddToList("Klaipeda");
+            //List<string> stringList1 = AddToList("Vilnius");
+            //List<string> stringList2 = AddToList("Kaunas");
+            //List<string> stringList3 = AddToList("Klaipeda");
 
-            //Public ir Private skirtumas
-            var testClass = new Test();
-            testClass.SayHelloPublic("Jonas");
+            ////Public ir Private skirtumas
+            //var testClass = new Test();
+            //testClass.SayHelloPublic("Jonas");
 
 
-            MiniCalculator("+", 9, 1);
-            MiniCalculator("-", 8, 4);
+            //MiniCalculator("+", 9, 1);
+            //MiniCalculator("-", 8, 4);
 
-            MiniCalculator2("+", 9, 1);
-            MiniCalculator2("-", 8, 4);
+            //MiniCalculator2("+", 9, 1);
+            //MiniCalculator2("-", 8, 4);
 
-            //NupiestiRemeli(10);
-            //NupiestiRemeli(10, 10);
+            ////NupiestiRemeli(10);
+            ////NupiestiRemeli(10, 10);
 
-            int sum1 = CalculateSumRecursively(1, 10);
+            //int sum1 = CalculateSumRecursively(1, 10);
+
+            //---------------------------------------------------- 1 UZDUOTIS -----------------------------------------------------------
+
+            //string vardas = GetName();
+            //Console.WriteLine($"Jusu vardas yra: {vardas}");
+
+            //ARBA 
+            //JusuVardas();
+
+            //----------------------------------------------------- 2 UZDUOTIS --------------------------------------------------------
+
+            //string vardas = GetName();
+            //double skaicius = GetNumber();
+            //KartotiVarda(vardas, skaicius);
+
+            ////ARBA
+            ////string vardas = GetName();
+            ////Kartoti2(vardas);
+            ///
+            //--------------------------------------------------- 3 UZDUOTIS ---------------------------------------------------------
+
+            //int kiek = KiekSimboliu();
+            //Raso(kiek);
+
+            //--------------------------------------------------- 4 UZDUOTIS ---------------------------------------------------------
+
+            ////Kmi();//kazkodel neveikia
+
+            //double svoris = Kilogramai();
+            //double ugisKvadratu = MetraiKvadratu();
+            //double kmi = svoris / ugisKvadratu;
+            //Console.WriteLine($"Jusu KMI yra: {kmi}");
+
+            //--------------------------------------------------- 5 UZDUOTIS --------------------------------------------------------
+
+            //TarpSkaitis();
+
+            //--------------------------------------------------- 6 UZDUOTIS --------------------------------------------------------
+
+            PrintOutArrayList();
+            int arejuSK = ArejuSkaicius();
+            int suma = ArejuSuma();
+            Console.WriteLine($"Suma: {suma}, viso: {arejuSK} elementai");
+
+        }//---------------------------------------------------------------------------------------------------------------------------
+        //public static void ArejuSumaElementai(int arejuSK, int suma)
+        //{
+        //    arejuSK = ArejuSkaicius();
+        //    suma = ArejuSuma();
+        //    Console.WriteLine($"Suma: {suma}, viso: {arejuSK} elementai");
+        //}
+        public static void PrintOutArrayList()
+        {
+            int[] arejus = new int[] { 1, 24, 46, 71, 18 };
+            //foreach (var item in arejus)
+            //{
+                
+            //    Console.WriteLine(item);
+            //}
+            Console.WriteLine($"Array sarasas: {string.Join(", ", arejus)}");
         }
+        public static int ArejuSkaicius()
+        {
+            int[] arejus = new int[] { 1, 24, 46, 71, 18 };
+            int arejuSK = arejus.Length;
+           
+            return arejuSK;
+        }        
+        public static int ArejuSuma()
+        {
+
+            int[] arejus = new int[] { 1, 24, 46, 71, 18 };
+            int suma = 0;
+            for (int i = 0; i < arejus.Length; i++)
+            {
+                suma += arejus[i];
+            }
+            return suma;
+
+            //int[] skaiciai = new int[10];
+
+            //Random random = new Random();
+
+            //for (int i = 0; i < skaiciai.Length; i++)
+            //{
+            //    skaiciai[i] = random.Next(1, 100);
+            //}
+            //foreach (var item in skaiciai)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //return skaiciai;
+
+            //int[] intai = new int[5] { 1, 2, 3, 4, 5 };
+            //return intai;
+
+
+            //double[] dablai = new double[10];
+            //dablai[1] = 1;
+            //dablai[2] = 2;
+            //dablai[3] = 3;
+            //dablai[4] = 4;
+            //dablai[5] = 5;
+            //dablai[6] = 6;
+            //dablai[7] = 7;
+            //dablai[8] = 8;
+            //dablai[9] = 9;
+            //dablai[10] =10 ;
+            //return dablai[] ;
+        }
+        public static void TarpSkaitis()
+        {
+            Console.WriteLine("Iveskite bet koki sakini: ");
+            string sakinys = Console.ReadLine();
+            int countSpaces = sakinys.Count(Char.IsWhiteSpace);
+            Console.WriteLine($"Jusu sakinyje buvo {countSpaces} tarpu");
+        }
+        public static void Kmi(double svoris, double ugisKvadratu)
+        {
+            svoris = Kilogramai();
+            ugisKvadratu = MetraiKvadratu();
+            double kmi = svoris / ugisKvadratu;
+            Console.WriteLine($"Jusu KMI yra: {kmi}");
+        }
+        public static double MetraiKvadratu()
+        {
+            Console.WriteLine("Iveskite savo ugi metrais: ");
+            double ugis = double.Parse(Console.ReadLine());
+            double ugisKvadratu = ugis * ugis;
+            return ugisKvadratu;
+        } 
+        public static double Kilogramai()
+        {
+            Console.WriteLine("Iveskite savo svori kilogramais: ");
+            double svoris = double.Parse(Console.ReadLine());
+            return svoris;
+        }
+        public static void Raso(int kiek)
+        {
+            //Console.WriteLine($"# {* kiek}");//NEVEIKIA :D 
+            string str = new string('#', kiek);
+            Console.WriteLine(str);
+        }        
+        public static int KiekSimboliu()
+        {
+            Console.WriteLine("Iveskite bet kokiu simboliu seka: ");
+            string input = Console.ReadLine();
+            int kiek = input.Length;
+            Console.WriteLine(kiek);
+            return kiek;
+        }
+        public static void JusuVardas()
+        {
+            Console.WriteLine("Iveskite savo varda: ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Jusu vardas yra: {name}");
+        }
+        public static string GetName()
+        {
+            Console.WriteLine("Sveiki, iveskite savo varda: ");
+            string vardas = Console.ReadLine();
+            return vardas;
+        }
+        public static double GetNumber()
+        {
+            Console.WriteLine("Iveskite kiek kartu norite isvesti i konsole savo varda: ");
+            double skaicius = double.Parse(Console.ReadLine());
+            return skaicius ;
+        }
+        public static void KartotiVarda(string vardas, double skaicius)
+        {            
+            for (int i = 0; i < skaicius; i++)
+            {
+                Console.WriteLine($"Sveiki {vardas}");
+            }
+        }
+        public static void Kartoti2(string vardas)
+        {
+            Console.WriteLine("Kiek?");
+            int num = int.Parse(Console.ReadLine());
+            for (int i = 0; i < num; i++)
+            {
+                Console.WriteLine($"{vardas}");
+            }
+        }
+        
+        //-----------------------------------------------------------------------------------------------------------------------
 
         #region Basic Methodai
 
@@ -291,6 +478,10 @@ namespace Tema_5_Methodai
         }
 
         #endregion
+       
+
+
+
 
     }
 }
