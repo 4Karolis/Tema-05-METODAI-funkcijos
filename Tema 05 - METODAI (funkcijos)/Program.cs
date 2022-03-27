@@ -97,12 +97,76 @@ namespace Tema_5_Methodai
 
             ////8.2
             //SumaNuoIkiSuParametrais();
-
+            //SumaNuoIkiPliusParametrai();
+            SumaNuoIkiSuParametraisBool();
             ////8 SUJUNGTA
             
 
-        }//---------------------------------------------------------------------------------------------------------------------------
 
+            ////Tiesiog isveda TRUE/FALSE
+            //Console.WriteLine("Input 1:");
+            //int x = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Input 2:");
+            //int y = int.Parse(Console.ReadLine());
+            //Console.WriteLine(x == 20 || y == 20 || (x + y == 20));
+
+        }//---------------------------------------------------------------------------------------------------------------------------
+        public static void SumaNuoIkiPliusParametrai()
+        {
+            Console.WriteLine("iveskite pirma skaiciu: ");
+            int pirmas = int.Parse(Console.ReadLine());
+            Console.WriteLine("iveskite antra skaiciu: ");
+            int antras = int.Parse(Console.ReadLine());
+
+            int suma = 0;
+
+            for (int i = pirmas; i <= antras; i++)
+            {
+                Console.WriteLine($"{suma} + {i} = {suma + i}");
+                suma += i;
+            }
+            Console.WriteLine($"Skaiciu suma nuo {pirmas} iki {antras} = {suma}");
+
+        }
+        public static void SumaNuoIkiSuParametraisBool()
+        {
+            Console.WriteLine("iveskite pirma skaiciu: ");
+            int pirmas = int.Parse(Console.ReadLine());
+            Console.WriteLine("iveskite antra skaiciu: ");
+            int antras = int.Parse(Console.ReadLine());
+
+            int suma = 0;
+            bool rodytiTarpineSuma = (pirmas < antras);
+
+            for (int i = pirmas; i <= antras; i++)
+            {
+                Console.WriteLine($"{suma} + {i} = {suma + i}");
+                suma += i;
+            }
+        }              
+        public static void SumaNuoIkiSuParametrais2()
+        {
+            Console.WriteLine("iveskite pirma skaiciu: ");
+            int pirmas = int.Parse(Console.ReadLine());
+            Console.WriteLine("iveskite antra skaiciu: ");
+            int antras = int.Parse(Console.ReadLine());
+
+            int suma = 0;
+            bool nezinau = (pirmas < antras);
+
+            if (nezinau)
+            {
+                  for (int i = pirmas; i <= antras; i++)
+                  {
+                    Console.WriteLine($"{suma} + {i} = {suma + i}");
+                     suma += i;
+                  }
+            }
+            else
+            {
+                Console.WriteLine("Nebesvaik...");
+            }
+        }
         public static void SumaNuoIkiSuParametrais()
         {
             Console.WriteLine("iveskite pirma skaiciu: ");
