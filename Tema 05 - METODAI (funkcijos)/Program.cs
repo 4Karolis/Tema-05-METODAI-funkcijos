@@ -90,12 +90,50 @@ namespace Tema_5_Methodai
             //--------------------------------------------------- 7 UZDUOTIS --------------------------------------------------------
 
             //PakeltiLaipsniu();
-           
+
             //--------------------------------------------------- 8 UZDUOTIS --------------------------------------------------------
+            ////8.1
+            //SumaNuoIki();
 
+            ////8.2
+            //SumaNuoIkiSuParametrais();
 
+            ////8 SUJUNGTA
+            
 
         }//---------------------------------------------------------------------------------------------------------------------------
+
+        public static void SumaNuoIkiSuParametrais()
+        {
+            Console.WriteLine("iveskite pirma skaiciu: ");
+            int pirmas = int.Parse(Console.ReadLine());
+            Console.WriteLine("iveskite antra skaiciu: ");
+            int antras = int.Parse(Console.ReadLine());
+
+            int suma = 0;
+
+            for (int i = pirmas; i <= antras; i++)
+            {
+                Console.WriteLine($"{suma} + {i} = {suma + i}");
+                suma += i;
+            }
+        }
+        public static void SumaNuoIki()
+        {
+            Console.WriteLine("iveskite pirma skaiciu: ");
+            int pirmas = int.Parse(Console.ReadLine());
+            Console.WriteLine("iveskite antra skaiciu: ");
+            int antras = int.Parse(Console.ReadLine());
+
+            int suma = 0;
+
+            for (int x = pirmas; x <= antras; x++)
+            {
+                suma += x;
+            }
+
+            Console.WriteLine($"\nVisu skaiciu tarp {pirmas} ir {antras} suma (imtinai) yra: {suma}");
+        }
         public static void PakeltiLaipsniu()
         {
             double sk1 = Gauti1Sk();
