@@ -77,7 +77,7 @@ namespace Tema_5_Methodai
 
             //--------------------------------------------------- 5 UZDUOTIS --------------------------------------------------------
 
-            //TarpSkaitis();
+            TarpSkaitis();
 
             //--------------------------------------------------- 6 UZDUOTIS --------------------------------------------------------
 
@@ -98,9 +98,9 @@ namespace Tema_5_Methodai
             ////8.2
             //SumaNuoIkiSuParametrais();
             //SumaNuoIkiPliusParametrai();
-            SumaNuoIkiSuParametraisBool();
+            //SumaNuoIkiSuParametraisBool();
             ////8 SUJUNGTA
-            
+
 
 
             ////Tiesiog isveda TRUE/FALSE
