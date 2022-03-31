@@ -70,7 +70,7 @@ namespace Tema_5_Methodai
 
             double svoris = Kilogramai();
             double ugisKvadratu = MetraiKvadratu();
-            //Kmi(Kilogramai, MetraiKvadratu);//kazkodel neveikia
+            Kmi(svoris, ugisKvadratu);//kazkodel neveikia
 
             //double svoris = Kilogramai();
             //double ugisKvadratu = MetraiKvadratu();
