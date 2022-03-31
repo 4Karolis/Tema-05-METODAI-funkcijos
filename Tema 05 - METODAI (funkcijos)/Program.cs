@@ -68,7 +68,9 @@ namespace Tema_5_Methodai
 
             //--------------------------------------------------- 4 UZDUOTIS ---------------------------------------------------------
 
-            ////Kmi();//kazkodel neveikia
+            double svoris = Kilogramai();
+            double ugisKvadratu = MetraiKvadratu();
+            //Kmi(Kilogramai, MetraiKvadratu);//kazkodel neveikia
 
             //double svoris = Kilogramai();
             //double ugisKvadratu = MetraiKvadratu();
@@ -77,7 +79,7 @@ namespace Tema_5_Methodai
 
             //--------------------------------------------------- 5 UZDUOTIS --------------------------------------------------------
 
-            TarpSkaitis();
+            //TarpSkaitis();
 
             //--------------------------------------------------- 6 UZDUOTIS --------------------------------------------------------
 
