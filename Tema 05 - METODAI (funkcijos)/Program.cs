@@ -322,7 +322,7 @@ namespace Tema_5_Methodai
             Console.WriteLine("Iveskite bet kokiu simboliu seka: ");
             string input = Console.ReadLine();
             int kiek = input.Length;
-            Console.WriteLine(kiek);
+            //Console.WriteLine(kiek);
             return kiek;
         }
         public static void JusuVardas()
